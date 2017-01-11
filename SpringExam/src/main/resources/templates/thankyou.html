@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>home page</title>
+</head>
+<body>
+<h1>Projects</h1>
+<div>
+    <p>Early access of Greenfox Academy Zerda Raptor Projects with tech tags</p>
+</div>
+<ul>
+    <li th:each="project : ${projects}" th:text="${project.name} + ' ' + ${projectStat.count} + ': ' + ${project.typeOfTech}"></li>
+</ul>
+</body>
+</html>
